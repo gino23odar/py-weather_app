@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{title}} Weather</title>
+    <link href="{{url_for('static', filename='styles/style.css')}}" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <h1>Current Weather for {{title}}, {{ country }}</h1>
+    <p>{{ status }} </p>
+    <img src="http://openweathermap.org/img/wn/{{icon}}@2x.png" alt="Weather Icon">
+    <p> and {{ temp }} &deg;</p>
+    <p> Feels like {{ feels_like }} &deg;</p>
+
+    <form action="/weather" >
+        <label for="city">Enter City Name:</label>
+        <input type="text" name="city" id="city" >
+        <button type="submit">Get Weather</button>
+    </form>
+</body>
+</html>

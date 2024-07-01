@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Weather App</title>
+    <link href="{{url_for('static', filename='styles/style.css')}}" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <h1>Get Current Weather</h1>
+    <form action="/weather" >
+        <label for="city">Enter City Name:</label>
+        <input type="text" name="city" id="city" >
+        <button type="submit">Get Weather</button>
+    </form>
+</body>
+</html>
